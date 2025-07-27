@@ -1,1 +1,43 @@
 # This is a dummy comment to trigger the PR
+# Workflow ka naam jo GitHub Actions UI mein dikhega
+name: Java CI with Maven
+
+# Yeh workflow kab chalega?
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+# Workflow ke andar chalne wale saare kaam (jobs)
+jobs:
+  # Humne ek hi job banayi hai jiska naam 'build-and-test' hai
+  build-and-test:
+    # Yeh job kaunsi virtual machine par chalegi?
+    runs-on: ubuntu-latest
+
+    # Is job ke andar chalne wale saare steps
+    steps:
+      # Step 1: Repository ka code virtual machine par download karna
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Java (JDK 17) ko set up karna
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      # Step 3: Maven command se tests ko run karna
+      - name: Run Tests with Maven
+        run: mvn clean test -Dbrowser=chrome -Dchrome.headless=true
+
+      # Step 4: Test report ko save karna (artifact ke roop mein)
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myntra-test-report
+          path: reports/MyntraAutomationReport.html
