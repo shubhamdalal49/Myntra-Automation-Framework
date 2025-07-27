@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Myntra Automation Test Suite" verbose="2">
+
+    <test name="Myntra Product Purchase Flow Test">
+        <classes>
+            <class name="com.myntra.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+    
+</suite>

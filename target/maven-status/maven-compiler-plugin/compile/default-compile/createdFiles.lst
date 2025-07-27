@@ -1,0 +1,9 @@
+com\myntra\automation\pages\CartPage.class
+com\myntra\automation\utils\ScreenshotUtil.class
+com\myntra\automation\pages\ProductPage.class
+com\myntra\automation\utils\configReader.class
+com\myntra\automation\base\BasePage.class
+com\myntra\automation\pages\LoginPage.class
+com\myntra\automation\pages\HomePage.class
+com\myntra\automation\base\BaseTest.class
+com\myntra\automation\pages\SearchResultsPage.class
