@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.435 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.527 s <<< FAILURE! - in TestSuite
+com.myntra.automation.runners.TestRunner.runScenario["User searches for a product and successfully adds it to the bag", "Myntra Product Purchase Flow"](1)  Time elapsed: 7.644 s  <<< FAILURE!
+java.lang.NullPointerException
+

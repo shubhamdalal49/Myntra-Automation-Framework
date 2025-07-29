@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Myntra Automation Test Suite</span>
+              <span class="suite-name border-failed">Myntra Automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" class="hide-methods passed suite-Myntra_Automation_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Myntra_Automation_Test_Suite -->
-                      <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" class="show-methods passed suite-Myntra_Automation_Test_Suite"> (show)</a> <!-- show-methods passed suite-Myntra_Automation_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" class="hide-methods failed suite-Myntra_Automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Myntra_Automation_Test_Suite -->
+                      <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" class="show-methods failed suite-Myntra_Automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-Myntra_Automation_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Myntra_Automation_Test_Suite">
+                    <div class="method-list-content failed suite-Myntra_Automation_Test_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Myntra_Automation_Test_Suite" title="com.myntra.automation.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User searches for a product and successfully adds it to the bag&quot;, &quot;Myntra Product Purchase Flow&quot;)">runScenario("User searches for a product and successfully adds it to the bag", "Myntra Product Purchase Flow")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Myntra_Automation_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Myntra_Automation_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Myntra_Automation_Test_Suite" class="panel Myntra_Automation_Test_Suite">
-          <div class="suite-Myntra_Automation_Test_Suite-class-passed">
+          <div class="suite-Myntra_Automation_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.myntra.automation.runners.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,12 +130,22 @@
                   </a> <!-- runScenario("User searches for a product and successfully adds it to the bag", "Myntra Product Purchase Flow") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("User searches for a product and successfully adds it to the bag","Myntra Product Purchase Flow")</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+	at com.myntra.automation.base.BaseTest.initialization(BaseTest.java:62)
+	at com.myntra.automation.stepdefinitions.MyntraStepDefinitions.setUp(MyntraStepDefinitions.java:28)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Myntra_Automation_Test_Suite-class-passed -->
+          </div> <!-- suite-Myntra_Automation_Test_Suite-class-failed -->
         </div> <!-- panel Myntra_Automation_Test_Suite -->
         <div panel-name="test-xml-Myntra_Automation_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,12 +210,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.myntra.automation.runners.TestRunner')
-data.setCell(0, 3, 27861);
+data.setCell(0, 3, 7489);
 window.suiteTableData['Myntra_Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Myntra_Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Myntra_Automation_Test_Suite">
               </div> <!-- times-div-Myntra_Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -233,16 +243,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.myntra.automation.runners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@235d29d6)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@59072e9d)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("User searches for a product and successfully adds it to the bag", "Myntra Product Purchase Flow")</span>
-                <span class="method-start">1256 ms</span>
+                <span class="method-start">1239 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">29130 ms</span>
+                <span class="method-start">8742 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
