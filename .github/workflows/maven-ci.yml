@@ -1,5 +1,3 @@
-# shifted under workflows
-# CI setup yml file 
 name: Java CI with Maven
 
 on:
